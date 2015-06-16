@@ -22,6 +22,14 @@ public class Args {
 
     @Option(name="-d", aliases="--debug", usage="debug mode.")
     private boolean debugMode = false;
+    
+    @Option(name="-sc", aliases="--short-hand-color", usage="短針の色を指定する。")
+    private String shortHandColor = "#ff0000";
+    
+    public String getshortHandColor(){
+            return shortHandColor;
+    }
+    
 
     public boolean isRunningMode(){
         return !isShowVersion() && !isShowHelp();
